@@ -1,8 +1,8 @@
-# Yocto Orange Pi R1+ Build
+# Linux Yocto Orange Pi R1+ Build
 
 Dev Kit Reference: [Orange Pi R1+](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/orange-pi-R1-Plus-LTS.html)
 
-This repository is an example Yocto build to generate custom images for the Orange Pi R1+ Dev Kit.
+This repository is an example Yocto build to generate custom Linux images for the Orange Pi R1+ Dev Kit.
 
 ## Requirements
 
