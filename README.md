@@ -25,12 +25,12 @@ $ bitbake orangepi-docker-image
 
 1. Find the output SD Card image:  
 ```
-build/tmp/deploy/images/orangepi-r1plus/core-image-minimal-orangepi-r1plus.wic  
+build/tmp/deploy/images/orangepi-r1plus/IMAGE_NAME.wic  
 ```
 2. Insert the SD card to be programmed in your computer.  
 3. Flash the image. In the command below:
     - Replace sdX by your SD card identifier (e.g.: sdb):  
-    - Replace IMAGE_NAME by the name of the wic file produced by the `bitbake` command in previous sections  
+    - Replace IMAGE_NAME by the name of the file found in the previous step  
 ```
 sudo bmaptool copy --bmap build/tmp/deploy/images/orangepi-r1plus/IMAGE_NAME.wic.bmap build/tmp/deploy/images/orangepi-r1plus/IMAGE_NAME.wic /dev/sdX  
 ```
