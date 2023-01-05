@@ -7,7 +7,12 @@
 ## Setup
 
 ```
-git submodule update --init
-./setup.sh
+$ git submodule update --init
+$ ./setup.sh
 ```
 
+## Build Docker Image For Orange Pi R1+
+
+```
+$ bitbake orangepi-docker-image
+```
