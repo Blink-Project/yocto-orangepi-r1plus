@@ -24,9 +24,15 @@ $ bitbake orangepi-docker-image
 ## Flashing the SD card
 
 1. Find the output SD Card image:  
-> build/tmp/deploy/images/orangepi-r1plus/core-image-minimal-orangepi-r1plus.wic  
+```
+build/tmp/deploy/images/orangepi-r1plus/core-image-minimal-orangepi-r1plus.wic  
+```
 2. Insert the SD card to be programmed in your computer.  
-3. Flash the image, replacing sdX by your SD card identifier (e.g.: sdb):  
-> sudo bmaptool copy --bmap build/tmp/deploy/images/orangepi-r1plus/core-image-minimal-orangepi-r1plus.wic.bmap build/tmp/deploy/images/orangepi-r1plus/core-image-minimal-orangepi-r1plus.wic /dev/sdX  
+3. Flash the image. In the command below:
+    - Replace sdX by your SD card identifier (e.g.: sdb):  
+    - Replace IMAGE_NAME by the name of the wic file produced by the `bitbake` command in previous sections  
+```
+sudo bmaptool copy --bmap build/tmp/deploy/images/orangepi-r1plus/IMAGE_NAME.wic.bmap build/tmp/deploy/images/orangepi-r1plus/IMAGE_NAME.wic /dev/sdX  
+```
 4. Remove the SD card from your computer, insert it in your orangepi-r1+, and watch it boot!  
 5. UART console access will be provided on the 3-pins header beside the USB connector, baudrate=1500000 (see user orangepi r1+ user manual for more information about debug UART header)  
