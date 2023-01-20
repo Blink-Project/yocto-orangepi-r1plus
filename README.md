@@ -113,7 +113,7 @@ $ ./setup.sh
 ## Build Docker Image For Orange Pi R1+
 
 ```
-$ bitbake orangepi-docker-image
+$ MACHINE=orangepi-r1plus-lts bitbake orangepi-docker-image
 ```
 
 ## Flashing the SD card
