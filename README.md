@@ -24,14 +24,14 @@ In summary, it has everything we need to make it a valid replacement for a Raspb
 
 ### Hardware you should have with you
 
-1. A Debian/Ubuntu Computer (documentation for Windows is not done yet)
+1. A Debian or Ubuntu Computer (documentation for Windows is not done yet)
 2. An Orange Pi R1+ \[LTS\] (of course!)    
 ![Orangepi R1+ Image](doc/orangepir1-pluslts.png)  
-3. A UART to USB Adapter that can reach communication speeds of 1500000bds, such as "DTECH 6ft 3.3V FTDI USB to TTL Serial"  
+3. A USB-c cable/charger for powering up the device  
+4. A SD card, with a capacity of 16GB or higher  
+5. A USB to SD adapter  
+6. [Optional] A UART to USB Adapter that can reach communication speeds of 1500000bds, such as "DTECH 6ft 3.3V FTDI USB to TTL Serial"  
 ![FTDI Cable](doc/ftdi-example.jpg)  
-4. A USB-c cable/charger for powering up the device  
-5. A SD card, with a capacity of 16GB or higher  
-6. A USB to SD adapter  
 
 ### Preparing Your Computer
 
