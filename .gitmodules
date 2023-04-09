@@ -6,7 +6,7 @@
 	url = git://git.openembedded.org/meta-openembedded
 [submodule "layers/meta-orangepi-r1plus-bsp"]
 	path = layers/meta-orangepi-r1plus-bsp
-	url = github.com:aledemers/meta-orangepi-r1plus-bsp.git
+	url = git@github.com:aledemers/meta-orangepi-r1plus-bsp.git
 [submodule "layers/meta-virtualization"]
 	path = layers/meta-virtualization
 	url = git://git.yoctoproject.org/meta-virtualization
@@ -21,4 +21,4 @@
 	url = git://git.yoctoproject.org/poky.git
 [submodule "layers/meta-aledemers-distro"]
 	path = layers/meta-aledemers-distro
-	url = github.com:aledemers/meta-aledemers-distro.git
+	url = git@github.com:aledemers/meta-aledemers-distro.git
