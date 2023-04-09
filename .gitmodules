@@ -7,9 +7,6 @@
 [submodule "layers/meta-orangepi-r1plus-bsp"]
 	path = layers/meta-orangepi-r1plus-bsp
 	url = github.com:aledemers/meta-orangepi-r1plus-bsp.git
-[submodule "layers/meta-rockchip"]
-	path = layers/meta-rockchip
-	url = github.com:aledemers/meta-rockchip.git
 [submodule "layers/meta-virtualization"]
 	path = layers/meta-virtualization
 	url = git://git.yoctoproject.org/meta-virtualization
