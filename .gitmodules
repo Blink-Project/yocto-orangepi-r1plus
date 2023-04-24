@@ -10,9 +10,6 @@
 [submodule "layers/meta-virtualization"]
 	path = layers/meta-virtualization
 	url = git://git.yoctoproject.org/meta-virtualization
-[submodule "layers/meta-security"]
-	path = layers/meta-security
-	url = git://git.yoctoproject.org/meta-security
 [submodule "layers/meta-rust"]
 	path = layers/meta-rust
 	url = https://github.com/meta-rust/meta-rust.git
