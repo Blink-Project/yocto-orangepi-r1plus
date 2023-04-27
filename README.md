@@ -1,6 +1,9 @@
-# Linux Yocto Orange Pi R1+ Legacy/LTS
+# Linux Yocto OS For Orange Pi R1+
 
-This repository was developed by an independent developer, and aims at providing an easy-to-use Linux distribution 
+This codebase is used to generate a full OS image for Orangepi R1+ boards, with support
+for Docker and K3S (Kubernetes).
+
+It is maintained by independent developers and aims at providing an easy-to-use Linux distribution 
 for Orange Pi R1+ boards that can be used for something else than a router.
 
 ## What is the Orange Pi R1+ ??
@@ -21,6 +24,8 @@ First of all, here is the documentation about this board: [Orange Pi R1+ LTS](ht
 In summary, it has everything we need to make it a valid replacement for a Raspberry Pi!  
 
 ## Quick Start Guide
+
+Follow these steps to get up and running with your Orangepi R1+!  
 
 ### Hardware you should have with you
 
@@ -50,45 +55,47 @@ The SD Card of the Orange Pi R1+ is the main storage of the device. If you alrea
 
 Here are the steps to follow:  
 
-1. Download the latest `wic.gz` and `wic.bmap` files from the `Releases` section on the right in GitHub -->>
+1. Download the latest `wic.gz` and `wic.bmap` files from [the release section of this github repository](https://github.com/aledemers/yocto-orangepi-r1plus/releases)  
 2. Insert the SD card in the SD to USB adapter  
 3. Open a terminal were you downloaded the files  
 4. Connect your USB to SD adapter in your computer  
 5. Find the path to your SD card by typing the following command:  
 ```
 $ sudo dmesg
-[[ command output follows]]
-...
+
 [78214.923180] EXT4-fs (sdb3): mounting ext2 file system using the ext4 subsystem
 [78214.927112] EXT4-fs (sdb3): warning: mounting unchecked fs, running e2fsck is recommended
 [78214.931422] EXT4-fs (sdb3): mounted filesystem without journal. Opts: errors=remount-ro. Quota mode: none.
 [78214.991563] EXT4-fs (sdb4): recovery complete
 [78214.991569] EXT4-fs (sdb4): mounted filesystem with ordered data mode. Opts: errors=remount-ro. Quota mode: none.
 ```
-6. In the log above, you can see `sdb` mentionned a few times, indicating the SD card is `sdb`. The path is then: `/dev/sdb`  
-7. Run the following commands to program the SD card:  
+6. In the log above, you can see `sdb` mentioned a few times, indicating the SD card is `sdb`. The path is then: `/dev/sdb`  
+7. Open a Linux terminal in the folder where you downloaded `wic` files at step 1, then run the following commands to program the SD card:  
 ```
-$ BMAP_FILE=<<THE_BMAP_FILE_NAME_YOU_DOWNLOADED>>
-$ THE_WIC_GZ_FILE=<<THE_WIC_GZ_FILE_NAME_YOU_DOWNLOADED>>
+$ BMAP_FILE=orangepi-docker-image-orangepi-r1plus-lts.wic.bmap
+$ THE_WIC_GZ_FILE=orangepi-docker-image-orangepi-r1plus-lts.wic.gz
 $ SD_CARD_PATH=/dev/sdb       # For the example
 $ sudo umount "${SD_CARD_PATH}"/*
 $ sudo bmaptool copy --bmap "${THE_BMAP_FILE}" "${THE_WIC_GZ_FILE}" "${SD_CARD_PATH}"
 ```
-8. Once the command succeeds, you can remove the SD card
+8. Once the commands succeeds, you can remove the SD card
 
 ### Booting the board
 
-1. Insert the SD card previously programmed in in your `Orange Pi R1+` board  
+Your SD Card is now ready to launch!  
+
+1. Insert the SD card previously programmed in your `Orange Pi R1+` board  
 2. Power it on using the USB-C Cable or charger  
 3. After a few seconds, the dev kit's green LED should light solid ON, and the redlight should do periodic quick double flashes. If it does not, there is an issue! Redo the steps, or use the UART to USB cable to debug... TODO: write this documentation  
 4. You can now connect a network cable to one of the Ethernet port, and watch the network status lights flash!  
 5. You can connect to the Orange Pi board using SSH, after finding its IP address (use your router's web page to find the IP):  
+
 ```
 $ ssh root@IP_ADDRESS
 passwd: root
 ```
 
-### Use you dev kit!
+### Use your dev kit!
 
 Documentation in progress
 
@@ -106,6 +113,7 @@ This part of the documentation is for advanced users that would like to compile 
 ## Setup
 
 ```
+$ git clone https://github.com/aledemers/yocto-orangepi-r1plus.git
 $ git submodule update --init
 $ ./setup.sh
 ```
