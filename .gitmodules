@@ -16,6 +16,6 @@
 [submodule "layers/poky"]
 	path = layers/poky
 	url = git://git.yoctoproject.org/poky.git
-[submodule "layers/meta-aledemers-distro"]
-	path = layers/meta-aledemers-distro
-	url = git@github.com:aledemers/meta-aledemers-distro.git
+[submodule "layers/meta-blinkos"]
+	path = layers/meta-blinkos
+	url = git@github.com:aledemers/meta-blinkos.git
