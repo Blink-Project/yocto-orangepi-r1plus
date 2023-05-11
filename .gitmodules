@@ -6,7 +6,7 @@
 	url = git://git.openembedded.org/meta-openembedded
 [submodule "layers/meta-orangepi-r1plus-bsp"]
 	path = layers/meta-orangepi-r1plus-bsp
-	url = git@github.com:aledemers/meta-orangepi-r1plus-bsp.git
+	url = git@github.com:Blink-Project/meta-orangepi-r1plus-bsp.git
 [submodule "layers/meta-virtualization"]
 	path = layers/meta-virtualization
 	url = git://git.yoctoproject.org/meta-virtualization
@@ -18,4 +18,4 @@
 	url = git://git.yoctoproject.org/poky.git
 [submodule "layers/meta-blinkos"]
 	path = layers/meta-blinkos
-	url = git@github.com:aledemers/meta-blinkos.git
+	url = git@github.com:Blink-Project/meta-blinkos.git
