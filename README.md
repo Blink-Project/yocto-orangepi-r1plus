@@ -74,7 +74,7 @@ $ sudo dmesg
 ```
 $ BMAP_FILE=orangepi-docker-image-orangepi-r1plus-lts.wic.bmap
 $ THE_WIC_GZ_FILE=orangepi-docker-image-orangepi-r1plus-lts.wic.gz
-$ SD_CARD_PATH=/dev/sdb       # For the example
+$ SD_CARD_PATH=/dev/sdX       # Replace sdX by the previously found label (sdb in the example)
 $ sudo umount "${SD_CARD_PATH}"/*
 $ sudo bmaptool copy --bmap "${THE_BMAP_FILE}" "${THE_WIC_GZ_FILE}" "${SD_CARD_PATH}"
 ```
@@ -97,8 +97,17 @@ passwd: root
 
 ### Use your dev kit!
 
-Documentation in progress
+#### Customizing your device
 
+The whole filesystem is writable, so you can customize your device as you wish. Note that there is no configured package manager (like apt-get), as we did not bring up any yet.
+If you want to install more software than what is on your device, either use [docker](https://www.docker.com/), or compile it from sources. You have compilers available, and even git :)  
+
+#### Updating your device to a newer version of BlinkOS
+
+This is as easy as: repeat the installation steps from [Preparing the SD Card](#Preparing the SD Card)! All data stored in `/home/root`, `/data` and 
+`/var/lib/docker` will be kept throughout updates, but all the rest is going to be wiped off.
+
+Be careful to store your precious projects in one of these locations!
 
 # Developers Documentation
 
