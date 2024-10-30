@@ -1,0 +1,7 @@
+{
+        "recommendations": [
+                "yocto-project.yocto-bitbake",
+                "donjayamanne.python-extension-pack",
+                "mads-hartmann.bash-ide-vscode"
+        ]
+}

@@ -1,0 +1,33 @@
+{
+        "bitbake.commandWrapper": "${workspaceFolder}/shell.sh",
+        "bitbake.pathToBuildFolder": "${workspaceFolder}/build",
+        "bitbake.pathToEnvScript": "${workspaceFolder}/layers/poky/oe-init-build-env",
+        "bitbake.pathToBitbakeFolder": "${workspaceFolder}/layers/poky/bitbake",
+        "files.watcherExclude": {
+                "**/build": true
+        },
+        "search.exclude": {
+                "**/build": true
+        },
+        "C_Cpp.files.exclude": {
+                "**/build": true
+        },
+        "python.analysis.exclude": [
+                "**/build"
+        ],
+        "git.repositoryScanIgnoredFolders": [
+                "**/build"
+        ],
+        "python.autoComplete.extraPaths": [
+                "${workspaceFolder}/layers/poky/bitbake/lib",
+                "${workspaceFolder}/layers/poky/meta/lib"
+        ],
+        "python.analysis.extraPaths": [
+                "${workspaceFolder}/layers/poky/bitbake/lib",
+                "${workspaceFolder}/layers/poky/meta/lib"
+        ],
+        "files.associations": {
+                "*.conf": "bitbake",
+                "*.inc": "bitbake"
+        }
+}

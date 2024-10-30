@@ -124,7 +124,7 @@ This part of the documentation is for advanced users that would like to compile 
 ```
 $ git clone https://github.com/aledemers/yocto-orangepi-r1plus.git
 $ git submodule update --init
-$ ./setup.sh
+$ ./shell.sh
 ```
 
 ## Build Docker Image For Orange Pi R1+

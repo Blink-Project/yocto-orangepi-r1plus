@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/bash -e
+
+COMMAND="${1:-source layers/poky/oe-init-build-env && bash}"
 
 docker run \
     -it \
@@ -7,4 +9,4 @@ docker run \
     -v ~/.gitconfig:/home/pokyuser/.gitconfig:ro \
     -w "${PWD}" \
     crops/poky:ubuntu-20.04 \
-    bash -c 'source layers/poky/oe-init-build-env && bash'
+    bash -c "${COMMAND}"
