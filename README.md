@@ -72,8 +72,8 @@ $ sudo dmesg
 6. In the log above, you can see `sdb` mentioned a few times, indicating the SD card is `sdb`. The path is then: `/dev/sdb`  
 7. Open a Linux terminal in the folder where you downloaded `wic` files at step 1, then run the following commands to program the SD card:  
 ```
-$ BMAP_FILE=orangepi-docker-image-orangepi-r1plus-lts.wic.bmap
-$ THE_WIC_GZ_FILE=orangepi-docker-image-orangepi-r1plus-lts.wic.gz
+$ BMAP_FILE=blinkos-base-image-orangepi-r1plus-lts.wic.bmap
+$ THE_WIC_GZ_FILE=blinkos-base-image-orangepi-r1plus-lts.wic.gz
 $ SD_CARD_PATH=/dev/sdX       # Replace sdX by the previously found label (sdb in the example)
 $ sudo umount "${SD_CARD_PATH}"/*
 $ sudo bmaptool copy --bmap "${THE_BMAP_FILE}" "${THE_WIC_GZ_FILE}" "${SD_CARD_PATH}"
@@ -130,7 +130,7 @@ $ ./shell.sh
 ## Build Docker Image For Orange Pi R1+
 
 ```
-$ MACHINE=orangepi-r1plus-lts bitbake orangepi-docker-image
+$ MACHINE=orangepi-r1plus-lts bitbake blinkos-base-image
 ```
 
 ## Flashing the SD card

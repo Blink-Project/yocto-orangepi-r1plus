@@ -1,4 +1,6 @@
 build/tmp
+build/conf/conf-summary.txt
+build/workspace
 build/cache
 build/sstate*
 buildhistory
