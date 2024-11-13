@@ -1,7 +1,7 @@
 # Linux Yocto OS For Orange Pi R1+
 
 This codebase is used to generate a full OS image for Orangepi R1+ boards, with support
-for Docker and K3S (Kubernetes).
+for Docker and Docker Compose
 
 It is maintained by independent developers and aims at providing an easy-to-use Linux distribution 
 for Orange Pi R1+ boards that can be used for something else than a router.

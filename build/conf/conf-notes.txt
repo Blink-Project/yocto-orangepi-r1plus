@@ -4,7 +4,7 @@
 You can now run 'bitbake <target>'
 
 Blink OS targets are:
-    - orangepi-docker-image
+    - blinkos-base-image
 
 Other commonly useful commands are:
  - 'devtool' and 'recipetool' handle common recipe tasks
