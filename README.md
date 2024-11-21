@@ -83,10 +83,8 @@ If you want to install more software than what is on your device, either use [do
 
 #### Updating your device to a newer version of BlinkOS
 
-This is as easy as: repeat the installation steps from [Preparing the SD Card](#Preparing the SD Card)! All data stored in `/home/root`, `/data` and 
-`/var/lib/docker` will be kept throughout updates, but all the rest is going to be wiped off.
-
-Be careful to store your precious projects in one of these locations!
+This is as easy as: repeat the installation steps from [Preparing the SD Card](#Preparing the SD Card)! All files stored or modified in `/home`, `/data`, 
+`/var/lib/docker` and `/etc` will be kept throughout updates, but all the rest is going to be wiped off.
 
 ## Advanced Users Tips
 
