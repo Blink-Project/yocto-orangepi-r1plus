@@ -70,8 +70,8 @@ Your Micro-SD Card is now ready to launch!
 5. You can connect to the Orange Pi board using SSH, after finding its IP address (use your router's web page to find the IP):  
 
 ```shell
-$ ssh root@IP_ADDRESS
-passwd: root
+$ ssh blink@IP_ADDRESS
+passwd: blink
 ```
 
 ### Use your dev kit!
